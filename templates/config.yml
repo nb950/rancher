@@ -1,0 +1,8 @@
+name: csi-vxflexos driver
+description: |
+  # csi-vxflexos driver desc
+version: #
+category: storage
+maintainer: # The maintainer of the catalog entry
+license: # The license
+projectURL: https://github.com/dell/csi-powerflex
