@@ -1,0 +1,29 @@
+questions: 
+# csi-vxflexos
+- variable: openshift.enabled
+  label: Enable csi-vxflexos
+  description: "csi-driver"
+  type: boolean
+  default: false
+  group: csi-vxflexos
+
+# Controller
+- variable: controller.metrics.enabled
+  label: Enable Controller Metrics
+  description: "Deploy metrics service"
+  type: boolean
+  default: false
+  group: Controller
+- variable: controller.metrics.serviceMonitor.selector
+  label: Enable Prometheus Service Monitor
+  type: boolean
+  default: false
+  group: Controller
+
+
+# Redis
+- variable: redis.enabled
+  label: Enable Redis
+  type: boolean
+  default: true
+  group: Redis
