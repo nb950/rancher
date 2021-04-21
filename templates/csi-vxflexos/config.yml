@@ -1,7 +1,7 @@
 name: csi-vxflexos driver
 description: |
   # csi-vxflexos driver desc
-version: #
+version: 0
 category: storage
 maintainer: # The maintainer of the catalog entry
 license: # The license

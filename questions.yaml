@@ -21,9 +21,9 @@ questions:
   group: Controller
 
 
-# Redis
+# Node
 - variable: redis.enabled
-  label: Enable Redis
+  label: Enable Node
   type: boolean
   default: true
-  group: Redis
+  group: Node
