@@ -1,29 +1,29 @@
 questions: 
 # csi-vxflexos
 - variable: openshift.enabled
-  label: Enable csi-vxflexos
-  description: "csi-driver"
+  label: Enable openshift
+  description: "csi-driver enable openshift"
   type: boolean
   default: false
   group: csi-vxflexos
 
 # Controller
-- variable: controller.metrics.enabled
-  label: Enable Controller Metrics
-  description: "Deploy metrics service"
-  type: boolean
-  default: false
+- variable: controller.nodeSelector
+  label: Enable Controller 
+  description: "Leave as blank to use all nodes"
+  type: string
+  default: #   node-role.kubernetes.io/master: ""
   group: Controller
-- variable: controller.metrics.serviceMonitor.selector
-  label: Enable Prometheus Service Monitor
-  type: boolean
-  default: false
+- variable: controller.tolerations
+  label: tolerations
+  type: string
+  default: ""
   group: Controller
 
 
-# Node
-- variable: redis.enabled
-  label: Enable Node
+# Sdc Monitor
+- variable: monitor.enabled
+  label: Enable sdc monitor
   type: boolean
-  default: true
+  default: false
   group: Node
