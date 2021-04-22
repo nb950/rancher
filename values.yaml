@@ -1,5 +1,6 @@
 ---
 fullnameOverride: vxflexos
+nameOverride: vxflexos
 
 images:
   # "driver" defines the container image, used for the driver container.

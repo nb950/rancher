@@ -4,9 +4,9 @@ version: 1.4.0
 appVersion: 1.4.0
 apiVersion: v2
 description: |
-  VxFlex OS CSI (Container Storage Interface) driver Kubernetes
-  integration. This chart includes everything required to provision via CSI as
-  well as a VxFlex OS StorageClass.
+  PowerFlex CSI (Container Storage Interface) driver Kubernetes
+  integration. This chart includes everything required to provision via
+  a PowerFlex StorageClass.
 keywords:
 - csi
 - storage
@@ -16,3 +16,6 @@ maintainers:
 - name: DellEMC
 engine: gotpl
 icon: file://./dell-logo.png
+annotations:
+  catalog.cattle.io/certified: partner
+  catalog.cattle.io/release-name: vxflexos
