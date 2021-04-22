@@ -1,6 +1,6 @@
 ---
-Release:
-  name: csi-vxflexos
+fullnameOverride: vxflexos
+
 images:
   # "driver" defines the container image, used for the driver container.
   driver: amaas-eos-mw1.cec.lab.emc.com:5036/csi-vxflexos:master-latest
