@@ -15,3 +15,4 @@ sources:
 maintainers:
 - name: DellEMC
 engine: gotpl
+icon: file://./dell-logo.png

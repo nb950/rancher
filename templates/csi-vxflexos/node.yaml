@@ -174,7 +174,7 @@ spec:
               mountPath: /registration
             - name: driver-path
               mountPath: /csi
-        {{ if eq .Values.monitor.enabled true }}
+        {{ if eq .Values.sdc.enabled true }}
         - name: sdc-monitor
           securityContext:
             privileged: true
@@ -210,7 +210,6 @@ spec:
               mountPath: /storage
             - name: udev-d
               mountPath: /rules.d
-        {{ end }}
       initContainers:  
         - name: sdc
           securityContext:
@@ -282,6 +281,7 @@ spec:
         - name: vxflexos-config
           secret:
             secretName: {{ .Release.Name }}-config
+      {{ end }}
 {{ if .Values.podmon.enabled }}
         - name: usr-bin
           hostPath:

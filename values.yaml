@@ -1,5 +1,6 @@
 ---
-
+Release:
+  name: csi-vxflexos
 images:
   # "driver" defines the container image, used for the driver container.
   driver: amaas-eos-mw1.cec.lab.emc.com:5036/csi-vxflexos:master-latest
@@ -73,6 +74,11 @@ controller:
 # monitoring pod details
 # These options control the running of the monitoring container
 # This container gather diagnostic information in case of failure
+
+# disable init container for rancher deployment
+sdc:
+  enabled: false
+
 monitor:
   # enabled allows the usage of te monitoring pod to be disabled
   enabled: false

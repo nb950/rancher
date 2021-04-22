@@ -1,29 +1,23 @@
+categories:
+- storage
+namespace: vxflexos
+labels:
+  io.rancher.certified: partner
 questions: 
-# csi-vxflexos
-- variable: openshift.enabled
-  label: Enable openshift
-  description: "csi-driver enable openshift"
-  type: boolean
-  default: false
-  group: csi-vxflexos
+- variable: defaultFsType
+  label: "Defines Filesystem format"
+  type: enum
+  required: true
+  group: "General settings (Required)"
+  options:
+    - "existingDisk4"
+    - "xfs"
 
-# Controller
-- variable: controller.nodeSelector
-  label: Enable Controller 
-  description: "Leave as blank to use all nodes"
+- variable: volumeNamePrefix
+  label: "Defines a string prepended to each volume created"
   type: string
-  default: #   node-role.kubernetes.io/master: ""
-  group: Controller
-- variable: controller.tolerations
-  label: tolerations
-  type: string
-  default: ""
-  group: Controller
+  default: "k8svol"
+  required: true
+  group: "General settings (Required)"
 
 
-# Sdc Monitor
-- variable: monitor.enabled
-  label: Enable sdc monitor
-  type: boolean
-  default: false
-  group: Node
